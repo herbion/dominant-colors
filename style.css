@@ -1,0 +1,85 @@
+* {
+  transition: 300ms;
+}
+body,
+html {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.loading {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+.box {
+  display: inline-block;
+  width: 30px; height: 30px;
+  margin: 3px;
+  font-family: monospace;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 3px;
+  transform: scale(1);
+}
+/*#colors.show .box {*/
+/*  transform: scale(1);*/
+/*}*/
+/*
+.box.show {
+  transform: scale(1);
+}
+*/
+.box span {
+  opacity: 0;
+}
+.box:hover span {
+  opacity: 1;
+}
+#colors {
+  margin-bottom: 5px;
+  padding: 3px;
+  box-shadow: 0px 1px 3px #eee;
+}
+#container {
+  position: relative;
+}
+#container img {
+  border: 1px solid #999;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #eee;
+  height: 38em;
+}
+#controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+#controls * {
+  background: #fff;
+  border: 1px solid #000 !important;
+  font-family: monospace;
+  opacity: 0.25;
+}
+#controls input {
+  width: 400px;  
+}
+#controls input:hover {
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  opacity: 1;
+}
+
+#controls input:focus, #controls button:focus {
+  outline: none;
+}
+#controls input:hover + button, #controls button:hover {
+  background: #000;
+  color: #fff;
+  opacity: 1;
+}
+#controls button {
+  cursor: pointer;
+}
